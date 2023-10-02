@@ -27,3 +27,8 @@ Image to be added here later
 * Flutter 
 * Figma / Penpot 
 * Material UI 
+
+
+### Backend 
+* Django 
+* PostgreSQL
