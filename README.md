@@ -6,29 +6,7 @@ The application is going to be a single-user personalized application that will 
 2. Security 
 3. Simplicity 
 
-## Functional Requirements
-
-1. Insulin tracking 
-2. Meal & carb counting 
-3. Insulin calculators 
-4. Descriptive & predictive analytics 
-5. Offline functionality 
-6. Mood tracking 
-7. Stress tracking 
-8. User statistics 
-
 ## Solution Architecture
+Open to changes in upcoming iterations
 
-Image to be added here later 
-
-## Tech Stack 
-
-### Frontend 
-* Flutter 
-* Figma / Penpot 
-* Material UI 
-
-
-### Backend 
-* Django 
-* PostgreSQL
+![architecture](diagrams/Solution_architecture.drawio.png "Solution Architecture for the mobile app")
