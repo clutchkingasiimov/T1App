@@ -9,4 +9,4 @@ The application is going to be a single-user personalized application that will 
 ## Solution Architecture
 Open to changes in upcoming iterations
 
-![architecture](diagrams/Solution_architecture.drawio.png "Solution Architecture for the mobile app")
+![architecture](diagrams/Solution_Architecture.drawio.png "Solution Architecture for the mobile app")
