@@ -6,7 +6,7 @@ The application is going to be a single-user personalized application that will 
 2. Security 
 3. Simplicity 
 
-## Solution Architecture
+## Solution Architecture (v0.1)
 Open to changes in upcoming iterations
 
 ![architecture](diagrams/Solution_Architecture.drawio.png "Solution Architecture for the mobile app")
