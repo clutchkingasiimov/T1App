@@ -5,8 +5,3 @@ The application is going to be a single-user personalized application that will 
 1. Resiliency 
 2. Security 
 3. Simplicity 
-
-## Solution Architecture
-Open to changes in upcoming iterations
-
-![architecture](diagrams/Solution_architecture.drawio.png "Solution Architecture for the mobile app")
