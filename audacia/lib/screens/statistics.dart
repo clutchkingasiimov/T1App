@@ -27,9 +27,9 @@ class Statistics extends StatelessWidget {
         child: Column(children: <Widget>[
           // Sets the height of the first button to be 48 pixels below
           SizedBox(height: 48.0),
-          PageButtons('Carb Statistics'),
-          SizedBox(height: 20.0),
           PageButtons('Insulin Statistics'),
+          SizedBox(height: 20.0),
+          PageButtons('Carb Statistics'),
           SizedBox(height: 20.0),
           PageButtons('Mood Statistics'),
           SizedBox(height: 20.0),
@@ -43,7 +43,7 @@ class Statistics extends StatelessWidget {
 class PageButtons extends StatelessWidget{
   final String buttonName;
 
-  const PageButtons(this.buttonName);
+  const PageButtons(this.buttonName, {super.key});
 
   @override
   Widget build(BuildContext context){
