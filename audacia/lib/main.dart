@@ -1,6 +1,7 @@
 import 'package:audacia/screens/calculators.dart';
 import 'package:audacia/screens/statistics.dart';
 import 'package:audacia/screens/displayScreen.dart';
+import 'package:audacia/screens/carbTracker.dart';
 import 'package:flutter/material.dart';
 import 'package:dynamic_color/dynamic_color.dart';
 import 'color_schemes.g.dart';
