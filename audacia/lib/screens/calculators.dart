@@ -17,8 +17,9 @@ class Calculators extends StatelessWidget {
           builder: (BuildContext context) {
             return IconButton(
               icon: const Icon(Icons.arrow_back),
-              onPressed: () { Scaffold.of(context).openDrawer(); },
-              tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip
+              onPressed: () {
+                Navigator.pop(context);
+              },
             );
           },
         ),
@@ -31,19 +32,20 @@ class Calculators extends StatelessWidget {
           SizedBox(height: 20.0),
           PageButtons('A1c Estimation'),
           SizedBox(height: 20.0),
-          PageButtons('Carbs to BE'),
-          SizedBox(height: 20.0),
-          PageButtons('Mood Shift Detection')
+          PageButtons('Carbs to BE')
+          // SizedBox(height: 20.0),
+          // PageButtons('Mood Shift Detection')
         ],)
       ),
     );
   }
 }
 
+
 class PageButtons extends StatelessWidget{
   final String buttonName;
 
-  const PageButtons(this.buttonName);
+  const PageButtons(this.buttonName, {super.key});
 
   @override
   Widget build(BuildContext context){
