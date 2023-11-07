@@ -6,9 +6,10 @@ import 'color_schemes.g.dart';
 class Statistics extends StatelessWidget {
   const Statistics({super.key});
 
-  @override 
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: lightColorScheme.background,
       appBar: AppBar(
         title: const Text('Statistics'),
         foregroundColor: lightColorScheme.onBackground,
@@ -17,14 +18,16 @@ class Statistics extends StatelessWidget {
           builder: (BuildContext context) {
             return IconButton(
               icon: const Icon(Icons.arrow_back),
-              onPressed: () { Scaffold.of(context).openDrawer(); },
-              tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip
+              onPressed: () {
+                Navigator.pop(context);
+              },
             );
           },
         ),
       ),
       body: const Center(
-        child: Column(children: <Widget>[
+          child: Column(
+        children: <Widget>[
           // Sets the height of the first button to be 48 pixels below
           SizedBox(height: 48.0),
           PageButtons('Insulin Statistics'),
@@ -34,39 +37,31 @@ class Statistics extends StatelessWidget {
           PageButtons('Mood Statistics'),
           SizedBox(height: 20.0),
           PageButtons('Blood Glucose Statistics')
-        ],)
-      ),
+        ],
+      )),
     );
   }
 }
 
-class PageButtons extends StatelessWidget{
+class PageButtons extends StatelessWidget {
   final String buttonName;
 
-  const PageButtons(this.buttonName, {super.key});
+  const PageButtons(this.buttonName, {super.key}); //Constructor
 
   @override
-  Widget build(BuildContext context){
-    // FilledButton 
+  Widget build(BuildContext context) {
+    // FilledButton
     return ElevatedButton(
-      onPressed: () {}, 
-      //Set the ButtonStyle for the size and colour
-      style: ButtonStyle(
-        minimumSize: MaterialStateProperty.all(
-          const Size(248,62)
-        ),
-        backgroundColor: MaterialStateProperty.all(
-          lightColorScheme.secondaryContainer
-        ),
-        // Give a shadow elevation to make the button have float elevation
-        elevation: MaterialStateProperty.all<double>(
-          4.0
-        )
-      ),
-      child: Text(buttonName,
-      //Change the textstyle
-      style: TextStyle(
-        color: lightColorScheme.onSecondaryContainer
-      )));
+        onPressed: () {},
+        //Set the ButtonStyle for the size and colour
+        style: ButtonStyle(
+            minimumSize: MaterialStateProperty.all(const Size(248, 62)),
+            backgroundColor:
+                MaterialStateProperty.all(lightColorScheme.secondaryContainer),
+            // Give a shadow elevation to make the button have float elevation
+            elevation: MaterialStateProperty.all<double>(4.0)),
+        child: Text(buttonName,
+            //Change the textstyle
+            style: TextStyle(color: lightColorScheme.onSecondaryContainer)));
   }
 }
