@@ -1,4 +1,9 @@
 import 'package:audacia/color_schemes.g.dart';
+import 'package:audacia/screens/calendar.dart';
+import 'package:audacia/screens/factors.dart';
+import 'package:audacia/screens/insulinTracker.dart';
+import 'package:audacia/screens/medications.dart';
+import 'package:audacia/screens/settings.dart';
 import 'package:flutter/material.dart';
 import 'package:audacia/screens/calculators.dart';
 import 'package:audacia/screens/statistics.dart';
@@ -6,6 +11,7 @@ import 'package:audacia/screens/carbTracker.dart';
 
 class MainMenuPage extends StatelessWidget {
   const MainMenuPage({super.key});
+
 
   @override
   Widget build(BuildContext context) {
@@ -19,12 +25,12 @@ class MainMenuPage extends StatelessWidget {
           mainAxisSpacing: 20,
           crossAxisCount: 2,
           children: const <Widget>[
-            // ScreenCards('Insulin Tracker', 'syringe.png', null),
+            ScreenCards('Insulin Tracker', 'syringe.png', InsulinTracker()),
             ScreenCards('Carb Tracker', 'food.png', CarbTracker()),
             ScreenCards('Calculators', 'calculator.png', Calculators()),
             ScreenCards('Statistics', 'analytics.png', Statistics()),
-            // ScreenCards('Medication', 'medication.png', null),
-            // ScreenCards('42 Factors', 'levels.png', null)
+            ScreenCards('Medication', 'medication.png', Medication()),
+            ScreenCards('42 Factors', 'levels.png', Factors())
           ]),
       bottomNavigationBar: NavigationBar(
         destinations: const [
