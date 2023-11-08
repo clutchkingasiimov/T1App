@@ -1,3 +1,8 @@
+//Implement an abstract class for the animals 
+abstract class Speak{
+  void animalSpeak(String speakType);
+}
+
 //Animal class 
 class Animal{
   String name;
@@ -18,12 +23,18 @@ class Animal{
 }
 
 //Bird class
+//The bird class extends to an abstract class
 class Bird extends Speak{
   String name;
   int age;
   
   
   Bird(this.name, this.age);
+
+  @override 
+  void animalSpeak(String speakType){
+    print('The animal says $speakType');
+  }
   
   void printName(){
     print('Name of animal is $name');
@@ -45,17 +56,6 @@ class Cat extends Animal{
     print('Name of the cat is $name');
   }
 }
-
-//Implement an abstract class for the animals 
-
-abstract class Speak{
-  
-  void animalSpeak(String speakType){
-    print('The animal says $speakType');
-  }
-}
-
-
 
 //Void function to print Animal's name
 void printClassInfo(Animal animal){
