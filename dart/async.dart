@@ -33,3 +33,32 @@ Future<void> asyncMain() async {
 void main() {
   asyncMain();
 }
+
+
+/* Another practice function tested on Dart */
+
+Future<void> loopNumbers(int range) async {
+  for (int i = 0; i <= range; i++){
+    print('Number printed: $i');
+    await Future.delayed(const Duration(seconds:1));
+  }
+}
+
+Future<void> loopString(int range) async {
+  for (int i = 0; i<=range; i++){
+    await Future.delayed(const Duration(seconds:3));
+    print('This loop will come after the number is printed');
+  }
+}
+
+Future<void> asyncMain() async {
+  List<void> results = await Future.wait([
+    loopNumbers(10),
+    loopString(10)
+  ]);
+  print(results);
+}
+
+void main(){
+  asyncMain();
+}
